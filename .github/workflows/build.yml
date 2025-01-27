@@ -274,7 +274,7 @@ jobs:
           patch -p1 --forward < 10_enable_susfs_for_ksu.patch || true
           
           # Change to common directory and apply SUSFS patch
-          cd ../common
+          cd ..
           patch -p1 < 50_add_susfs_in_${{env.SFS_BRANCH}}.patch || true
           
           # Apply Next-SUSFS Patches       
