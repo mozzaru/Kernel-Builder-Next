@@ -256,7 +256,7 @@ jobs:
         env: 
           ARCH: ${{ steps.generate-args.outputs.ARCH }}
           DEFCONFIG: ${{ env.WORKSPACE }}/${{ env.KERNEL_NAME }}/arch/${{ steps.generate-args.outputs.ARCH }}/configs/${{env.KERNEL_DEFCONFIG_PATH}}
-          SFS_BRANCH: ${{ matrix.CONFIG.KernelSUSFS.branch }}
+          SFS_BRANCH: ${{ matrix.CONFIG.KernelSUSFS.branches }}
         if: ${{ env.ENABLE_KERNELSU == 'true' && env.ENABLE_KERNELSU_SFS == 'true' }}
         run: |
           git clone https://gitlab.com/simonpunk/susfs4ksu.git -b "${{env.SFS_BRANCH}}"
