@@ -2,10 +2,10 @@
     {
         "kernelSource": { 
             "name": "San-kernel", 
-            "repo": "https://github.com/mozzaru/android_kernel_xiaomi_msm8953_49", 
-            "branch": "android-4.9-stable", 
+            "repo": "https://github.com/mozzaru/android_kernel_xiaomi_markw_new", 
+            "branch": "lineage-22.1", 
             "device": "markw", 
-            "defconfig": "markw-perf_defconfig" 
+            "defconfig": "markw_defconfig" 
           }, 
           "toolchains": [ 
             {  
