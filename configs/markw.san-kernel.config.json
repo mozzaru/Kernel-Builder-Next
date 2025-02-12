@@ -1,15 +1,15 @@
 [
     {
         "kernelSource": { 
-            "name": "k60-baalam", 
-            "repo": "https://github.com/luyanci/android_kernel_xiaomi_sm8475", 
-            "branch": "staging", 
-            "device": "mondrian", 
-            "defconfig": "vendor/mondrian_defconfig" 
+            "name": "San-kernel", 
+            "repo": "https://github.com/mozzaru/android_kernel_xiaomi_msm8953_49", 
+            "branch": "android-4.9-stable", 
+            "device": "markw", 
+            "defconfig": "markw-perf_defconfig" 
           }, 
           "toolchains": [ 
             {  
-               "url": "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/master/clang-r522817.tar.gz",  
+               "url": "https://github.com/ZyCromerZ/Clang/releases/download/17.0.0-20230725-release/Clang-17.0.0-20230725.tar.gz",  
                "name": "clang",  
                "binaryEnv": [
                 "bin"
@@ -37,14 +37,14 @@
             "use": true, 
             "release": true,
             "custom": {
-              "repo": "https://github.com/luyanci/Ak3",
-              "branch": "k60"
+              "repo": "https://github.com/mozzaru/anykernel",
+              "branch": "master"
             }
           },
-          "enableKernelSU": true, 
+          "enableKernelSU": false, 
           "KernelSUSFS":{
-            "enable": true,
-            "branches": "gki-android12-5.10"
+            "enable": false,
+            "branches": "kernel-4.19"
           },
           "enableLXC": false        
     }
