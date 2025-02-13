@@ -2,8 +2,8 @@
     {
         "kernelSource": { 
             "name": "San-kernel", 
-            "repo": "https://github.com/mozzaru/android_kernel_xiaomi_markw_new", 
-            "branch": "lineage-22.1", 
+            "repo": "https://github.com/mozzaru/kernel_markw", 
+            "branch": "therteen", 
             "device": "markw", 
             "defconfig": "markw_defconfig" 
           }, 
