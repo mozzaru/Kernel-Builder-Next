@@ -9,7 +9,7 @@
           }, 
           "toolchains": [ 
             {  
-               "url": "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/master/clang-r522817.tar.gz",  
+               "url": "https://github.com/kdrag0n/proton-clang.git",  
                "name": "clang",  
                "binaryEnv": [
                 "bin"
