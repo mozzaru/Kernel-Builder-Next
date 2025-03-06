@@ -2,14 +2,14 @@
     {
         "kernelSource": { 
             "name": "San-kernel", 
-            "repo": "https://github.com/mozzaru/kernel_markw", 
-            "branch": "therteen", 
+            "repo": "https://github.com/mozzaru/android_kernel_xiaomi_markw_new", 
+            "branch": "08032025", 
             "device": "markw", 
             "defconfig": "markw_defconfig" 
           }, 
           "toolchains": [ 
             {  
-               "url": "https://github.com/kdrag0n/proton-clang.git",  
+               "url": "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/master/clang-r522817.tar.gz",  
                "name": "clang",  
                "binaryEnv": [
                 "bin"
@@ -41,10 +41,10 @@
               "branch": "master"
             }
           },
-          "enableKernelSU": false, 
+          "enableKernelSU": true, 
           "KernelSUSFS":{
-            "enable": false,
-            "branches": "kernel-4.19"
+            "enable": true,
+            "branches": "kernel-4.9"
           },
           "enableLXC": false        
     }
