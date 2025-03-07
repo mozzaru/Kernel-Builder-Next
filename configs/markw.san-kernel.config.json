@@ -1,17 +1,18 @@
 [
     {
         "kernelSource": { 
-            "name": "San-kernel", 
+            "name": "FussionKernel", 
             "repo": "https://github.com/mozzaru/kernel_markw", 
-            "branch": "15", 
+            "branch": "15-ksu", 
             "device": "markw", 
             "defconfig": "markw_defconfig" 
           }, 
           "toolchains": [ 
             {  
-               "url": "https://github.com/kdrag0n/proton-clang.git",  
-               "name": "clang",  
-               "binaryEnv": [
+               "url": "https://github.com/kdrag0n/proton-clang",  
+               "branch": "master",
+               "name": "proton_clang",  
+               "binPath": [
                 "bin"
             ]  
             } 
@@ -19,18 +20,21 @@
           "enableCcache": true, 
           "params": { 
             "ARCH": "arm64", 
-            "CC": "clang/bin/clang", 
+            "CC": "proton-clang/bin/clang", 
             "externalCommands": { 
-              "CROSS_COMPILE": "aarch64-linux-gnu-", 
-              "CROSS_COMPILE_ARM32": "arm-linux-gnueabi-", 
-              "AS": "clang/bin/llvm-as", 
-              "AR": "clang/bin/llvm-ar",  
-              "NM":"clang/bin/llvm-nm" ,  
-              "OBJCOPY":"clang/bin/llvm-objcopy",  
-              "OBJDUMP":"clang/bin/llvm-objdump",  
-              "STRIP":"clang/bin/llvm-strip",  
-              "LD":"clang/bin/ld.lld", 
-              "LTO": "thin" 
+              "CROSS_COMPILE": "proton-clang/bin/aarch64-linux-gnu-",
+              "CROSS_COMPILE_ARM32": "proton-clang/bin/arm-linux-gnueabi-",
+              "LD": "proton-clang/bin/ld.lld",
+              "AR": "proton-clang/bin/llvm-ar",
+              "NM": "proton-clang/bin/llvm-nm",
+              "OBJCOPY": "proton-clang/bin/llvm-objcopy",
+              "OBJDUMP": "proton-clang/bin/llvm-objdump",
+              "READELF": "proton-clang/bin/llvm-readelf",
+              "OBJSIZE": "proton-clang/bin/llvm-size",
+              "STRIP": "proton-clang/bin/llvm-strip",
+              "LDGOLD": "proton-clang/bin/aarch64-linux-gnu-ld.gold",
+              "LLVM_AR": "proton-clang/bin/llvm-ar",
+              "LLVM_DIS": "proton-clang/bin/llvm-dis" 
             } 
           },  
           "AnyKernel3": { 
@@ -41,10 +45,10 @@
               "branch": "master"
             }
           },
-          "enableKernelSU": false, 
-          "KernelSUSFS":{
-            "enable": false,
-            "branches": "kernel-4.19"
+          "enableKernelSU": true, 
+          "KernelSUSFS": {
+            "enable": true,
+            "branches": "kernel-4.9"
           },
           "enableLXC": false        
     }
