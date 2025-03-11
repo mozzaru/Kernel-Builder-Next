@@ -9,7 +9,7 @@
           }, 
           "toolchains": [ 
             {  
-               "url": "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/master/clang-r522817.tar.gz",  
+               "url": "https://gitlab.com/itsshashanksp/android_prebuilts_clang_host_linux-x86_clang-r530567.git",  
                "name": "clang",  
                "binaryEnv": [
                 "bin"
